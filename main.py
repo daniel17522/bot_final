@@ -3,10 +3,10 @@ from aiogram.utils import executor
 from db import db_main
 from handlers import commands, fsm_products, fsm_member
 from config import dp, Bot,staff
+from buttons import start
 
 async def on_startup(_):
     for i in staff:
-        await Bot.send_message(chat_id=i, text="Бот включен!")
         await db_main.sql_create()
 
 
