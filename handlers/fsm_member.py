@@ -68,7 +68,7 @@ async def get_contact(message: types.Message, state: FSMContext):
 
 
 def register_handlers_order(dp: Dispatcher):
-    dp.register_message_handler(start_order, commands='order', state=None)
+    dp.register_message_handler(start_order, commands=['order'], state=None)
     dp.register_message_handler(get_article, state=OrderFSM.article)
     dp.register_message_handler(get_size, state=OrderFSM.size)
     dp.register_message_handler(get_quantity, state=OrderFSM.quantity)
