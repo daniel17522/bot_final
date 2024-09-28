@@ -1,5 +1,5 @@
 CREATE_TABLE_PRODUCTS = """
-    CREATE TABLE IF NOT EXISTS products_info (
+    CREATE TABLE IF NOT EXISTS products (
     id INTEGER PRIMARY KEY AUTOINCREMENT, 
     fullname VARCHAR(255),
     category VARCHAR(255),
@@ -11,6 +11,6 @@ CREATE_TABLE_PRODUCTS = """
 """
 
 INSERT_PRODUCTS_QUERY = """
-    INSERT INTO products_info (fullname, category, size_product, price, product_id, photo)
+    INSERT INTO products (fullname, category, size_product, price, product_id, photo)
     VALUES (?, ?, ?, ?, ?, ?)
 """

@@ -1,7 +1,7 @@
 import logging
 from aiogram.utils import executor
 from db import db_main
-from handlers import commands, fsm_products, fsm_member
+from handlers import commands, fsm_products, fsm_member, send_products
 from config import dp, Bot,staff
 from buttons import start
 
@@ -13,6 +13,7 @@ async def on_startup(_):
 commands.register_commands(dp)
 fsm_products.register_fsm_reg(dp)
 fsm_member.register_handlers_order(dp)
+send_products.register_send_products_handler(dp)
 
 
 

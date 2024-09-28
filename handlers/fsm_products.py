@@ -22,7 +22,7 @@ async def start_fsm(message: types.Message):
         await message.answer('У вас нет доступа к этой комманде!')
         return
 
-    await message.answer('Укажите название или бренд товара: ', reply_markup=buttons.cancel_button)
+    await message.answer('Укажите название или бренд товара: ')
     await FsmProduct.fullname.set()
 
 
